@@ -13,6 +13,11 @@ $ErrorActionPreference = "Stop"
 $root = $PSScriptRoot
 Set-Location $root
 
+# gh CLI: usar el del PATH o, si no esta, la ruta de instalacion por defecto
+$gh = (Get-Command gh -ErrorAction SilentlyContinue).Source
+if (-not $gh) { $gh = "C:\Program Files\GitHub CLI\gh.exe" }
+if (-not (Test-Path $gh)) { throw "No encuentro gh CLI. Instala GitHub CLI o ajusta la ruta." }
+
 # 1. Leer APP_VERSION de app\__init__.py
 $initPath = Join-Path $root "app\__init__.py"
 $verMatch = Select-String -Path $initPath -Pattern 'APP_VERSION\s*=\s*"([^"]+)"' | Select-Object -First 1
@@ -74,7 +79,7 @@ git push
 
 # 7. Publicar la release con los binarios como assets
 Write-Host "==> Creando release $tag en GitHub..." -ForegroundColor Cyan
-gh release create $tag "dist\Vita.exe" "Vita-Instalador.zip" --title "Vita $tag" --notes "Actualizacion de Vita $tag"
+& $gh release create $tag "dist\Vita.exe" "Vita-Instalador.zip" --title "Vita $tag" --notes "Actualizacion de Vita $tag"
 if ($LASTEXITCODE -ne 0) { throw "Fallo creando la release" }
 
 Write-Host "LISTO: Vita $tag publicada. La app de tu novia detectara la actualizacion." -ForegroundColor Green
