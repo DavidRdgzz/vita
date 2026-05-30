@@ -1,0 +1,31 @@
+Vita - Tu compañera fitness
+============================
+
+COMO INSTALAR (o ACTUALIZAR)
+----------------------------
+1. Si estas viendo esto dentro del .zip, primero EXTRAE todo:
+   clic derecho en el .zip  >  "Extraer todo..."  >  Extraer.
+
+2. Si ya tenias Vita abierta, cierrala antes de actualizar.
+
+3. Entra en la carpeta extraida y haz doble clic en:
+   "Instalar Vita.exe"
+
+4. Si Windows muestra una pantalla azul "Windows protegio tu PC":
+   - Haz clic en "Mas informacion"
+   - Luego en "Ejecutar de todas formas"
+   (Es normal: la app no tiene firma de pago, pero es segura.)
+
+5. Pulsa el boton "Instalar".
+
+Al actualizar NO pierdes tus datos (perfil, comidas, peso): se
+guardan a parte y se mantienen entre versiones. Ademas, cuando
+haya una version nueva, Vita te avisara dentro de la app con un
+boton para actualizar en un clic.
+
+LISTO
+-----
+- Vita queda en:  Documentos\Vita
+- Acceso directo "Vita" en el escritorio y el menu de inicio.
+
+Hecho con carino para ti.

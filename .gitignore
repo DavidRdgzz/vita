@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# PyInstaller (artefactos, se regeneran al compilar)
+build/
+dist/
+
+# Distribucion (se suben como assets de la release, no al repo)
+Vita-Instalador/
+Vita-Instalador.zip
+
+# Secretos: la API key NUNCA se sube
+apikey.txt
+.env
+
+# Datos locales de usuario
+*.db
